@@ -1,0 +1,4 @@
+Assignment:
+Write a program that takes a list or dictionary and print the item or key-value to a new line
+(Printing the item and position in a list on each new line. Take a dict, print key and value each new line).
+
