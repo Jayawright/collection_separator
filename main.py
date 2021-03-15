@@ -20,10 +20,10 @@ class Separator: # Class seperates values into each line.
 
         elif type(self.obj) == dict: 
             pair = self.obj.items()
-            pos = len(self.obj)
+            pos = 0
             for key, value in pair:
-                
-                phrase = f"position holds the key-value pair:\nKey: {key}\nValues: {value}"
+                pos += 1
+                phrase = f"position {pos} holds the key-value pair:\nKey: {key}\nValues: {value}"
                 print(phrase)
             
 
