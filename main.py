@@ -24,8 +24,8 @@ class Separator: # Class seperates values into each line.
         zipped_collection = zip(current_index, current_item) # pairing seperate lists items by their position.
         
         
-        for index, item in zipped_collection: 
-            phrase = f"Item at index {current_index}, is: {current_item}"
+        for index, item in zipped_collection: # For each index and item inside the zpped_collection
+            phrase = f"The item at index: {index}. is: {item}"
             print(phrase)
 
 
@@ -38,5 +38,6 @@ class Separator: # Class seperates values into each line.
 
 test_list = ["Apple", 75, "Dog", 3.12]
 s = Separator(test_list)
-
 s.list_separator()
+
+## MAKE THIS CLASS WORK FOR DICTIONARIES
