@@ -8,36 +8,31 @@ class Separator: # Class seperates values into each line.
         self.collection_type = type(collection) # Storing the type of collection.
     
 
-    def list_separator(self):
-        # Sepreates the list items into strings than prints them.
-        #obj_len = len(self.obj)  # Storing the length of the obj.
-        pos = range(len(self.obj)) # A ranged list from zero till the objects length.
-
-        current_index, current_item = [], [] # twi Empty lists that will hold appended index and item.
-
-        for item in self.obj:  # For each item in the collection print the item.
-            current_item.append(item)
-
-        for index in pos:
-            current_index.append(index)
+    def separator(self):
+     # Sepreates the list items into strings than prints them.
+        indexes = range(len(self.obj))
         
-        zipped_collection = zip(current_index, current_item) # pairing seperate lists items by their position.
-        
-        
-        for index, item in zipped_collection: # For each index and item inside the zpped_collection
-            phrase = f"The item at index: {index}. is: {item}"
-            print(phrase)
+        if type(self.obj) == list:
+            for index in indexes:
+                item = self.obj[index]
+                phrase = f"Item at index {index}. is {item}"
+                print(phrase)
 
-
-        return  print(phrase)# Return a formatted stirng with values and positions.
-    
-
-    def dict_separator(self):
-        pass
-
+        elif type(self.obj) == dict: 
+            pair = self.obj.items()
+            pos = len(self.obj)
+            for key, value in pair:
+                
+                phrase = f"position holds the key-value pair:\nKey: {key}\nValues: {value}"
+                print(phrase)
+            
 
 test_list = ["Apple", 75, "Dog", 3.12]
-s = Separator(test_list)
-s.list_separator()
+
+test_dic = {"Cats": 99, "Grapes": 3.13}
+
+
+s = Separator(test_dic)
+s.separator()
 
 ## MAKE THIS CLASS WORK FOR DICTIONARIES
